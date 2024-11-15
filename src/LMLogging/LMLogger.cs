@@ -30,7 +30,7 @@ namespace LMLogging
                 config = new Configuration(company: company, accessID: accessID, accessKey: accessKey);
                 apiClient = new ApiClient(config);
                 resource = new Resource(name: resourceName.ToString(), ids: resourceIds, create: true);
-                logs = new Logs(batch: false, interval: 0, responseCallback: responseInterface, apiClient: apiClient);
+                logs = new Logs(batch: true, interval: 10, responseCallback: responseInterface, apiClient: apiClient);
             }
             catch (Exception ex)
             {
